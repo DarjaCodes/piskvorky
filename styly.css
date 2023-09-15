@@ -1,20 +1,24 @@
 html {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  width: 400px;
-
+  margin: 0 auto;
+  padding: 40px;
+  width: 498px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #615dad, #ffc8da);
+  color: #ffffff;
 }
 
 
 .contejner {
-  text-align: center;
+
   justify-content: center;
 }
 
 .image img {
   display: block;
   width: 100%;
+  border-radius: 2% 2% 0 0;
 
 }
 
@@ -22,34 +26,51 @@ html {
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: #283e50;
+
 }
 
-.info__nadpis {}
+.info__nadpis {
+  font-family: 'Lobster', cursive;
+  font-size: 5 rem;
+}
 
 .info__text {
-  flex: 2;
   align-items: center;
+  margin: 22px;
+  text-align: center;
+
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
 
-
-
-
 }
 
 .buttons__rules {
   margin: 0;
-  border: 2px solid black;
   padding: 10px;
+  background-color: #1fcca4;
+  border-top: 1px solid #283e50;
+  text-decoration: none;
+  color: #ffffff;
 
+}
 
+.buttons__rules:hover {
+  background-color: #1cbb96;
 }
 
 .buttons__play {
   margin: 0;
-  border: 2px solid black;
   padding: 10px;
+  background-color: #0197f6;
+  text-decoration: none;
+  color: #ffffff;
+  border-top: 1px solid #283e50;
+}
+
+.buttons__play:hover {
+  background-color: #0090e9;
 }
