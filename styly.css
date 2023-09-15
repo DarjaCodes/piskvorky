@@ -5,26 +5,18 @@ html {
 
 }
 
-body {
-  width: 498px;
+.container {
+  width: 400px;
   text-align: center;
   font-family: sans-serif;
   background: linear-gradient(to bottom, #615dad, #ffc8da);
   color: #ffffff;
   margin: 0 auto;
   padding: 80px;
-
 }
-
 
 h1 {
   font-size: 3rem;
-}
-
-
-.contejner {
-
-  justify-content: center;
 }
 
 .image img {
