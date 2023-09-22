@@ -80,3 +80,14 @@ h1 {
 .buttons__play:hover {
   background-color: #0090e9;
 }
+
+.playground {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pole {
+  width: 2rem;
+  border: 2 solid black;
+}
