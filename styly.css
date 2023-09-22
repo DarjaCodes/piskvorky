@@ -1,5 +1,5 @@
 html {
-  width: 100%;
+  max-width: 80vmin;
   height: 100%;
   box-sizing: border-box;
 
@@ -44,6 +44,7 @@ h1 {
   margin: 22px;
   text-align: center;
   line-height: 1.5;
+  letter-spacing: 1;
 
 }
 
