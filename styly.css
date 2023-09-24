@@ -6,7 +6,10 @@ html {
 }
 
 .container {
-  max-width: 881px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* max-width: 881px; */
   width: 100%;
   text-align: center;
   font-family: sans-serif;
@@ -95,32 +98,38 @@ h1 {
 .menu__buttons {
   display: flex;
   justify-content: space-between;
+  border-radius: 2px;
+  gap: 5px;
+
 }
 
 .menu__buttons--turn {
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  gap: 5px;
   font-weight: bold;
 }
 
-.menu__buttons--turn img {
-  width: 80%;
-}
 
 .menu__buttons--home {
   background-color: #1cbb96;
   padding: 0.1rem;
-  border-radius: 2px;
   align-self: flex-end;
   margin-left: 700px;
+  width: 100%;
+
+
 
 
 }
 
 .menu__buttons--home img {
-  width: 100%;
+  width: 80%;
+  padding: 5px;
 
+}
+
+.menu__buttons--home:hover {
+  background-color: rgba(28, 187, 150, 0.8)
 }
 
 .menu__buttons--restart {
@@ -128,15 +137,20 @@ h1 {
   padding: 0.1rem;
   border-radius: 2px;
   align-self: flex-end;
+  width: 100%;
 
 
 }
 
 .menu__buttons--restart img {
-  width: 100%;
+  width: 80%;
+  padding: 5px;
 
 }
 
+.menu__buttons--restart:hover {
+  background-color: rgba(0, 144, 233, 0.8)
+}
 
 .pole {
   width: 8vmin;
@@ -146,5 +160,9 @@ h1 {
 }
 
 .pole:focus {
-  background-color: #615dad;
+  background-color: rgba(229, 204, 225, 0.8);
+}
+
+button:hover {
+  background: rgba(229, 204, 225, 0.8)
 }
