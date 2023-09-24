@@ -2,22 +2,23 @@ html {
   max-width: 80vmin;
   height: 100%;
   box-sizing: border-box;
-
-
+  background: linear-gradient(to bottom, #615dad, #ffc8da)
 }
 
 .container {
-  width: 881px;
+  max-width: 881px;
+  width: 100%;
   text-align: center;
   font-family: sans-serif;
-  background: linear-gradient(to bottom, #615dad, #ffc8da);
   color: #ffffff;
   margin: 0 auto;
   padding: 80px;
+
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+
 }
 
 .image img {
@@ -138,8 +139,12 @@ h1 {
 
 
 .pole {
-  width: 88px;
-  height: 88px;
+  width: 8vmin;
+  height: 8vmin;
   border: 1px solid black;
   background-color: #e5cce1;
+}
+
+.pole:focus {
+  background-color: #615dad;
 }
