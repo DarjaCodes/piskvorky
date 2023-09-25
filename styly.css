@@ -9,7 +9,7 @@ html {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
   text-align: center;
   font-family: sans-serif;
   color: #ffffff;
@@ -85,18 +85,30 @@ h1 {
   background-color: #0090e9;
 }
 
+/* hraci pole */
+
+.container__game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 80px;
+}
+
 .menu__buttons {
   display: flex;
   justify-content: space-between;
   border-radius: 2px;
   gap: 0.4rem;
-
 }
 
 .menu__buttons--turn {
   align-items: center;
   font-weight: bold;
-
 }
 
 .menu__buttons--home {
@@ -132,6 +144,12 @@ h1 {
   background-color: rgba(0, 144, 233, 0.8)
 }
 
+.right-side {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
 .playground {
   display: flex;
   flex-wrap: wrap;
@@ -151,10 +169,4 @@ h1 {
 
 button:hover {
   background: rgba(229, 204, 225, 0.8)
-}
-
-.right-side {
-  display: flex;
-  justify-content: end;
-  gap: 0.5rem;
 }
