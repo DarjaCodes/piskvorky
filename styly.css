@@ -89,7 +89,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   border-radius: 2px;
-  gap: 5px;
+  gap: 0.4rem;
 
 }
 
@@ -138,14 +138,14 @@ h1 {
   padding-top: 1.5rem;
 }
 
-.pole {
+.box {
   width: 8vmin;
   height: 8vmin;
   border: 1px solid black;
   background-color: #e5cce1;
 }
 
-.pole:focus {
+.box:focus {
   background-color: rgba(229, 204, 225, 0.8);
 }
 
