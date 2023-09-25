@@ -85,6 +85,13 @@ h1 {
   background-color: #0090e9;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 3rem;
+  }
+}
+
 /* hraci pole */
 
 .container__game {
