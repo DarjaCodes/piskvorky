@@ -21,9 +21,16 @@
 let currentPlayer = 'circle';
 
 const selectLogo = (event) => {
-  event.target.classList.add('board__field--circle');
+  if (currentPlayer === 'circle') {
+    event.target.classList.remove('board__field--cross');
+    event.target.classList.add('board__field--circle');
+    currentPlayer = 'cross';
+  } else if (currentPlayer === 'cross') {
+    event.target.classList.remove('board__field--circle');
+    event.target.classList.add('board__field--cross');
+    currentPlayer = 'circle';
+  }
 };
-
 document
   .querySelector('button:nth-child(1)')
   .addEventListener('click', selectLogo);
