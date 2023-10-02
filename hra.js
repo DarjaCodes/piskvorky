@@ -1,25 +1,4 @@
-// const buttontext = () => {
-//   document.querySelector('.board__field--cross img').src = 'images/cross.svg';
-// };
-// buttontext();
-
-// const changeBut = () => {
-//   const PoleElm = document.querySelector('#but1 button');
-//   PoleElm.className = '.board__field--circle'
-//   butElm.addEventListener ('click', ())
-// };
-
-// const changeBut = () => {
-//   const buttonElm = document.querySelector('#but1');
-//   buttonElm.classList.add('board__field--circle'); // Přidání třídy
-//   buttonElm.classList.remove('board__field--cross'); // Odebrání třídy
-// };
-
-// const butElm = document.querySelector('#but1');
-// butElm.addEventListener('click', changeBut);
-
 let currentPlayer = 'circle';
-let PocetKliknuti = 0;
 
 const selectLogo = (event) => {
   if (currentPlayer === 'circle') {
@@ -27,17 +6,16 @@ const selectLogo = (event) => {
     event.target.classList.add('board__field--circle');
     document.querySelector('#player-indicator').src = 'images/circle2.svg';
     currentPlayer = 'cross';
+    event.target.disabled = true;
   } else if (currentPlayer === 'cross') {
     event.target.classList.contains('board__field--circle');
     event.target.classList.add('board__field--cross');
     document.querySelector('#player-indicator').src = 'images/cross2.svg';
     currentPlayer = 'circle';
-  }
-  PocetKliknuti++;
-  if (PocetKliknuti >= 1) {
     event.target.disabled = true;
   }
 };
+
 document
   .querySelector('button:nth-child(1)')
   .addEventListener('click', selectLogo);
