@@ -166,28 +166,31 @@ h1 {
 .box {
   width: 8vmin;
   height: 8vmin;
-  border: 1px solid black;
+  border: 1px solid rgb(83, 65, 83);
   background-color: #e5cce1;
+
 }
 
-.box:focus {
+/* .box:focus {
   background-color: rgba(229, 204, 225, 0.8);
 }
 
 button:hover {
   background: rgba(229, 204, 225, 0.8)
-}
+} */
 
 /* hra */
 
 .board__field--circle {
   background-image: url(images/circle.svg);
-  background-size: cover;
-
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
 
 .board__field--cross {
   background-image: url(images/cross.svg);
-  background-size: cover;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
 }

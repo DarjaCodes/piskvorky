@@ -17,8 +17,8 @@ const selectLogo = (event) => {
 };
 
 const confirmE = (event) => {
-  const UserConfirmed = confirm('Opravdu chcete zacit znovu?');
-  if (UserConfirmed === false) {
+  const UserReply = confirm('Opravdu chcete začít znovu?');
+  if (UserReply === false) {
     event.preventDefault();
   }
 };
