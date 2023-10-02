@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piškvorky</title>
     <link rel="stylesheet" type="text/css" href="styly.css" />
+    <script type="module" src="hra.js"></script>
   </head>
   <body class="container__game">
     <h1 class="info__title">Piškvorky</h1>
     <div class="menu__buttons">
       <div class="menu__buttons menu__buttons--turn">
         <h2>HRAJE:</h2>
-        <a href="hra.html"
+        <!-- <a href="hra.html"
           ><img src="images/circle.svg" alt="circleButton"
-        /></a>
+        /></a> -->
+        <a class="board__field--circle"></a>
+        <a class="board__field--cross"> <img src ="images/circle.svg"</a>
       </div>
       <div class="right-side">
         <a href="index.html" class="menu__buttons menu__buttons--home">
@@ -25,16 +28,16 @@
       </div>
     </div>
     <div class="playground">
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
-      <button class="box"></button>
+      <button id="but1" class="box"></button>
+      <button id="but2" class="box"></button>
+      <button id="but3" class="box"></button>
+      <button id="but4" class="box"></button>
+      <button id="but5" class="box"></button>
+      <button id="but6" class="box"></button>
+      <button id="but7" class="box"></button>
+      <button id="but8" class="box"></button>
+      <button id="but9" class="box"></button>
+      <button id="but10" class="box"></button>
       <button class="box"></button>
       <button class="box"></button>
       <button class="box"></button>

@@ -177,3 +177,17 @@ h1 {
 button:hover {
   background: rgba(229, 204, 225, 0.8)
 }
+
+/* hra */
+
+.board__field--circle {
+  background-image: url(images/circle.svg);
+  background-size: cover;
+
+}
+
+
+.board__field--cross {
+  background-image: url(images/cross.svg);
+  background-size: cover;
+}
