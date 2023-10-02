@@ -19,6 +19,7 @@
 // butElm.addEventListener('click', changeBut);
 
 let currentPlayer = 'circle';
+let PocetKliknuti = 0;
 
 const selectLogo = (event) => {
   if (currentPlayer === 'circle') {
@@ -32,8 +33,11 @@ const selectLogo = (event) => {
     document.querySelector('#player-indicator').src = 'images/cross2.svg';
     currentPlayer = 'circle';
   }
+  PocetKliknuti++;
+  if (PocetKliknuti >= 1) {
+    event.target.disabled = true;
+  }
 };
-
 document
   .querySelector('button:nth-child(1)')
   .addEventListener('click', selectLogo);
