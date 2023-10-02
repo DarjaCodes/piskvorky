@@ -22,15 +22,18 @@ let currentPlayer = 'circle';
 
 const selectLogo = (event) => {
   if (currentPlayer === 'circle') {
-    event.target.classList.remove('board__field--cross');
+    event.target.classList.contains('board__field--cross');
     event.target.classList.add('board__field--circle');
+    document.querySelector('#player-indicator').src = 'images/circle2.svg';
     currentPlayer = 'cross';
   } else if (currentPlayer === 'cross') {
-    event.target.classList.remove('board__field--circle');
+    event.target.classList.contains('board__field--circle');
     event.target.classList.add('board__field--cross');
+    document.querySelector('#player-indicator').src = 'images/cross2.svg';
     currentPlayer = 'circle';
   }
 };
+
 document
   .querySelector('button:nth-child(1)')
   .addEventListener('click', selectLogo);
