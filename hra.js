@@ -16,6 +16,12 @@ const selectLogo = (event) => {
   }
 };
 
+const confirmE = (event) => {
+  const UserConfirmed = confirm('Opravdu chcete zacit znovu?');
+  if (UserConfirmed === false) {
+    event.preventDefault();
+  }
+};
 document
   .querySelector('button:nth-child(1)')
   .addEventListener('click', selectLogo);
@@ -49,3 +55,7 @@ document
 document
   .querySelector('button:nth-child(10)')
   .addEventListener('click', selectLogo);
+
+document
+  .querySelector('.menu__buttons--restart')
+  .addEventListener('click', confirmE);
