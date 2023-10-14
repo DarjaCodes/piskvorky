@@ -2,6 +2,7 @@ import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
 let currentPlayer = 'circle';
 
+/* Prvni funkce pro zobrazeni symbolu a posluchac udalosti*/
 const selectLogo = (event) => {
   if (currentPlayer === 'circle') {
     event.target.classList.contains('board__field--cross');
@@ -17,19 +18,12 @@ const selectLogo = (event) => {
     event.target.disabled = true;
   }
 };
-document
-  .querySelector('.menu__buttons--restart')
-  .addEventListener('click', (event) => {
-    const UserReply = confirm('Opravdu chcete začít znovu?');
-    if (UserReply === false) {
-      event.preventDefault();
-    }
-  });
-
 const buttonsClick = document.querySelectorAll('.box');
 buttonsClick.forEach((button) => {
   button.addEventListener('click', selectLogo);
 });
+
+/* Vytvoreni pole a druha funkce*/
 const checkBoard = () => {
   const buttonsArray = Array.from(buttonsClick).map((field) => {
     if (field.classList.contains('board__field--cross')) {
@@ -40,9 +34,7 @@ const checkBoard = () => {
       return '_';
     }
   });
-
   const winner = findWinner(buttonsArray);
-
   if (winner === 'x') {
     setTimeout(() => {
       alert('Vyhrál hráč X');
@@ -64,3 +56,13 @@ const checkBoard = () => {
 document.querySelectorAll('.box').forEach((button) => {
   button.addEventListener('click', checkBoard);
 });
+
+/* Osetreni restartu*/
+document
+  .querySelector('.menu__buttons--restart')
+  .addEventListener('click', (event) => {
+    const userReply = confirm('Opravdu chcete začít znovu?');
+    if (userReply === false) {
+      event.preventDefault();
+    }
+  });
