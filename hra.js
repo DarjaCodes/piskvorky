@@ -16,6 +16,7 @@ const selectLogo = (event) => {
     currentPlayer = 'circle';
     event.target.disabled = true;
   }
+  checkBoard();
 };
 
 const confirmE = (event) => {
@@ -24,7 +25,41 @@ const confirmE = (event) => {
     event.preventDefault();
   }
 };
-const ButtonsClick = document.querySelectorAll('.box');
-ButtonsClick.forEach((button) => {
+const buttonsClick = document.querySelectorAll('.box');
+buttonsClick.forEach((button) => {
   button.addEventListener('click', selectLogo);
+});
+const checkBoard = () => {
+  const buttonsArray = Array.from(buttonsClick).map((field) => {
+    if (field.classList.contains('board__field--cross')) {
+      return 'x';
+    } else if (field.classList.contains('board__field--circle')) {
+      return 'o';
+    } else {
+      return '_';
+    }
+  });
+
+  const winner = findWinner(buttonsArray);
+
+  if (winner === 'x') {
+    setTimeout(() => {
+      alert('Vyhrál hráč X');
+      location.reload();
+    }, 1000);
+  } else if (winner === 'o') {
+    setTimeout(() => {
+      alert('Vyhrál hráč O');
+      location.reload();
+    }, 1000);
+  } else if (winner === 'tie') {
+    setTimeout(() => {
+      alert('Hra skoncila remízou');
+      location.reload();
+    }, 1000);
+  }
+};
+
+document.querySelectorAll('.box').forEach((button) => {
+  button.addEventListener('click', checkBoard);
 });
