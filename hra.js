@@ -16,7 +16,6 @@ const selectLogo = (event) => {
     currentPlayer = 'circle';
     event.target.disabled = true;
   }
-  checkBoard();
 };
 
 const confirmE = (event) => {
@@ -25,6 +24,7 @@ const confirmE = (event) => {
     event.preventDefault();
   }
 };
+
 const buttonsClick = document.querySelectorAll('.box');
 buttonsClick.forEach((button) => {
   button.addEventListener('click', selectLogo);
