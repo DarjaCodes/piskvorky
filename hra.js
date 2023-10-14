@@ -17,13 +17,14 @@ const selectLogo = (event) => {
     event.target.disabled = true;
   }
 };
-
-const confirmE = (event) => {
-  const UserReply = confirm('Opravdu chcete začít znovu?');
-  if (UserReply === false) {
-    event.preventDefault();
-  }
-};
+document
+  .querySelector('.menu__buttons--restart')
+  .addEventListener('click', (event) => {
+    const UserReply = confirm('Opravdu chcete začít znovu?');
+    if (UserReply === false) {
+      event.preventDefault();
+    }
+  });
 
 const buttonsClick = document.querySelectorAll('.box');
 buttonsClick.forEach((button) => {
