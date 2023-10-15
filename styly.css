@@ -1,20 +1,25 @@
 html {
-  max-width: 80vmin;
-  min-height: 100%;
   box-sizing: border-box;
-  background: linear-gradient(to bottom, #615dad, #ffc8da)
+}
+
+body {
+
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #615dad, #ffc8da);
+
+
 }
 
 .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
   text-align: center;
   font-family: sans-serif;
   color: #ffffff;
   margin: 0 auto;
-  padding: 80px;
+
 
 }
 
@@ -95,6 +100,7 @@ h1 {
 /* hraci pole */
 
 .container__game {
+  max-width: 80vmin;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -104,6 +110,8 @@ h1 {
   color: #ffffff;
   margin: 0 auto;
   padding: 80px;
+
+
 }
 
 .menu__buttons {
@@ -111,6 +119,7 @@ h1 {
   justify-content: space-between;
   border-radius: 2px;
   gap: 0.4rem;
+  align-items: center;
 }
 
 .menu__buttons--turn {
