@@ -1,8 +1,9 @@
 import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
 let currentPlayer = 'circle';
+const buttonsClick = document.querySelectorAll('.box');
 
-/* Prvni funkce pro zobrazeni symbolu a posluchac udalosti*/
+/* Prvni funkce pro zobrazeni symbolu*/
 const selectLogo = async (event) => {
   if (currentPlayer === 'circle') {
     event.target.classList.contains('board__field--cross');
@@ -41,7 +42,6 @@ const selectLogo = async (event) => {
       const { x, y } = data.position;
       const field = buttonsClick[x + y * 10];
       field.click();
-      console.log('field:', field);
     }
   }
   if (currentPlayer === 'cross') {
@@ -52,11 +52,6 @@ const selectLogo = async (event) => {
     event.target.disabled = true;
   }
 };
-
-const buttonsClick = document.querySelectorAll('.box');
-buttonsClick.forEach((button) => {
-  button.addEventListener('click', selectLogo);
-});
 
 /* Vytvoreni pole a druha funkce*/
 const checkBoard = () => {
@@ -87,9 +82,12 @@ const checkBoard = () => {
     }, 1000);
   }
 };
-
+/* Posluchace udalosti*/
 document.querySelectorAll('.box').forEach((button) => {
-  button.addEventListener('click', checkBoard);
+  button.addEventListener('click', function () {
+    selectLogo(event);
+    checkBoard();
+  });
 });
 
 /* Osetreni restartu*/
